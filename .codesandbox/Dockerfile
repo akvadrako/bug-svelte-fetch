@@ -6,9 +6,7 @@ RUN corepack enable \
     && corepack prepare yarn@stable --activate \
     && corepack enable yarn
 
-COPY package.json .yarnrc.yml yarn.lock ./
-
-RUN yarn install --immutable
-
-CMD yarn run dev
+# COPY package.json .yarnrc.yml yarn.lock ./
+# RUN yarn install --immutable
+# CMD yarn run dev
 
