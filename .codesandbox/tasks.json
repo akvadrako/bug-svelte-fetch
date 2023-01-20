@@ -1,0 +1,23 @@
+{
+    "setupTasks": ["yarn install"],
+    "tasks": {
+        "install": {
+            "name": "Install Dependencies",
+            "command": "yarn install",
+            "restartOn": {
+                "files": ["yarn.lock", "**/package.json"],
+                "branch": true,
+            }
+        },
+        "run-dev": {
+            "name": "Run Dev Server",
+            "command": "yarn run dev",
+            "runAtStart": true,
+            "preview": {
+                "port": 5173,
+                // devtool
+                "prLink": "direct" 
+            }
+        }
+    }
+}
